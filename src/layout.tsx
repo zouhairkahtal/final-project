@@ -3,11 +3,16 @@ import { Nav } from "./components/Nav";
 
 export function Layout() {
   return (
-    <div>
-      <div >
-        <Nav/>
+    <div className="h-screen flex flex-col">
+
+      <header className="h-16">
+        <Nav />
+      </header>
+
+ 
+      <main className="flex-1 overflow-auto ">
         <Outlet />
-      </div>
+      </main>
     </div>
   );
 }

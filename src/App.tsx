@@ -9,6 +9,10 @@ import {
   QueryClientProvider,
 
 } from '@tanstack/react-query'
+import { ForgotPassword } from "./views/ForgrtPassword";
+import { ResetPassword } from "./views/ResetPassword";
+import { BudgetForm } from "./views/BudgetForm";
+import { RemoveBudgets } from "./views/RemoveBudgets";
 
 
 const queryClient=  new QueryClient();
@@ -32,12 +36,28 @@ function App() {
           element: <LogIn />,
         },
         {
-          path: "SingUP",
+          path: "SingUp",
           element: <SingUP />,
+        },
+        {
+          path: "ForgotPassword",
+          element: <ForgotPassword />,
+        },
+        {
+          path: "ResetPassword",
+          element: <ResetPassword />,
         },
         {
           path: "Dashboard",
           element: <Dashboard />,
+        },
+        {
+          path: "BudgetForm",
+          element: <BudgetForm />,
+        },
+        {
+          path: "RemoveBudgets",
+          element: <RemoveBudgets />,
         },
         {
           path: "*",

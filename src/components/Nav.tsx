@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 export function Nav() {
   return (
     
-<Disclosure as="nav" className="bg-purple-700 text-white shadow">
+<Disclosure as="nav" className="bg-purple-700  text-white shadow">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -28,6 +28,12 @@ export function Nav() {
                 <Link to="/dashboard" className="hover:text-purple-200 transition">
                   Dashboard
                 </Link>
+                 <Link to="/BudgetForm" className="hover:text-purple-300">
+                Budget Form
+              </Link>
+               <Link to="/RemoveBudgets" className="hover:text-purple-300">
+                Remove Budgets
+              </Link>
               </div>
 
               {/* Mobile Menu Button */}
@@ -54,6 +60,12 @@ export function Nav() {
               </Link>
               <Link to="/dashboard" className="hover:text-purple-300">
                 Dashboard
+              </Link>
+              <Link to="/BudgetForm" className="hover:text-purple-300">
+                Budget Form
+              </Link>
+              <Link to="/RemoveBudgets" className="hover:text-purple-300">
+                Remove Budgets
               </Link>
             </div>
           </Disclosure.Panel>
