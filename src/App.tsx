@@ -3,20 +3,15 @@ import { LogIn } from "../src/views/LogIn";
 import { SingUP } from "./views/SingUP";
 // import { HomePage } from "../src/views/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {
-  QueryClient,
-  QueryClientProvider,
-
-} from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ForgotPassword } from "./views/ForgrtPassword";
 import { ResetPassword } from "./views/ResetPassword";
 import { BudgetForm } from "./views/BudgetForm";
 import { Dashboard } from "./views/dashboard";
-import { Portfolio } from "./views/portfolio";
+
 // import { RemoveBudgets } from "./views/RemoveBudgets";
 
-
-const queryClient=  new QueryClient();
+const queryClient = new QueryClient();
 function App() {
   const router = createBrowserRouter([
     {
@@ -56,10 +51,7 @@ function App() {
           path: "BudgetForm",
           element: <BudgetForm />,
         },
-        {
-          path: "Portfolio",
-          element: <Portfolio />,
-        },
+
         // {
         //   path: "RemoveBudgets",
         //   element: <RemoveBudgets />,
@@ -72,18 +64,14 @@ function App() {
             </h1>
           ),
         },
- 
       ],
     },
   ]);
-  return(
+  return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
     </QueryClientProvider>
   );
- 
-
-
 }
 
 export default App;
