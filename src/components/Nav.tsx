@@ -19,20 +19,16 @@ export function Nav() {
 
               {/* Desktop Menu */}
               <div className="hidden sm:flex space-x-6">
-                <Link to="/" className="hover:text-purple-200 transition">
-                  Home
-                </Link>
-                <Link to="/login" className="hover:text-purple-200 transition">
-                  Login
-                </Link>
+               
+                
                 <Link to="/dashboard" className="hover:text-purple-200 transition">
                   Dashboard
                 </Link>
                  <Link to="/BudgetForm" className="hover:text-purple-300">
-                Budget Form
+                 Add Budget
               </Link>
-               <Link to="/RemoveBudgets" className="hover:text-purple-300">
-                Remove Budgets
+               <Link to="/Portfolio" className="hover:text-purple-300">
+                  Portfolio
               </Link>
               </div>
 
@@ -52,21 +48,16 @@ export function Nav() {
           {/* Mobile Menu Content */}
           <Disclosure.Panel className="sm:hidden px-4 pb-4">
             <div className="flex flex-col space-y-2">
-              <Link to="/" className="hover:text-purple-300">
-                Home
-              </Link>
-              <Link to="/login" className="hover:text-purple-300">
-                Login
-              </Link>
+            
               <Link to="/dashboard" className="hover:text-purple-300">
                 Dashboard
               </Link>
               <Link to="/BudgetForm" className="hover:text-purple-300">
                 Budget Form
               </Link>
-              <Link to="/RemoveBudgets" className="hover:text-purple-300">
+              {/* <Link to="/RemoveBudgets" className="hover:text-purple-300">
                 Remove Budgets
-              </Link>
+              </Link> */}
             </div>
           </Disclosure.Panel>
         </>

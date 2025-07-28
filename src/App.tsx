@@ -1,8 +1,7 @@
 import { Layout } from "../src/layout";
 import { LogIn } from "../src/views/LogIn";
-import { Dashboard } from "../src/views/dashboard";
 import { SingUP } from "./views/SingUP";
-import { HomePage } from "../src/views/HomePage";
+// import { HomePage } from "../src/views/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   QueryClient,
@@ -12,7 +11,9 @@ import {
 import { ForgotPassword } from "./views/ForgrtPassword";
 import { ResetPassword } from "./views/ResetPassword";
 import { BudgetForm } from "./views/BudgetForm";
-import { RemoveBudgets } from "./views/RemoveBudgets";
+import { Dashboard } from "./views/dashboard";
+import { Portfolio } from "./views/portfolio";
+// import { RemoveBudgets } from "./views/RemoveBudgets";
 
 
 const queryClient=  new QueryClient();
@@ -25,12 +26,12 @@ function App() {
       children: [
         {
           index: true,
-          element: <HomePage />,
+          element: <LogIn />,
         },
-        {
-          path: "HomePage",
-          element: <HomePage />,
-        },
+        // {
+        //   path: "HomePage",
+        //   element: <HomePage />,
+        // },
         {
           path: "LogIn",
           element: <LogIn />,
@@ -56,9 +57,13 @@ function App() {
           element: <BudgetForm />,
         },
         {
-          path: "RemoveBudgets",
-          element: <RemoveBudgets />,
+          path: "Portfolio",
+          element: <Portfolio />,
         },
+        // {
+        //   path: "RemoveBudgets",
+        //   element: <RemoveBudgets />,
+        // },
         {
           path: "*",
           element: (
