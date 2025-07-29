@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -46,30 +45,33 @@ export function Nav(): JSX.Element {
   const handleClose = (): void => setIsModalOpen(false);
 
   return (
-    <Disclosure as="nav" className="bg-purple-700 text-white shadow">
+    <Disclosure as="nav" >
       {({ open }: { open: boolean }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16 items-center">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  text-black shadow rounded-full ">
+            <div className="flex justify-between h-16 items-center ">
               {/* Logo */}
               <div className="flex items-center">
                 <Link to="/" className="text-2xl font-bold text-white">
-                  MyApp
+             <svg fill="#000000" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="dashboard" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect x="2" y="2" width="9" height="11" rx="2"></rect><rect x="13" y="2" width="9" height="7" rx="2"></rect><rect x="2" y="15" width="9" height="7" rx="2"></rect><rect x="13" y="11" width="9" height="11" rx="2"></rect></g></svg>
                 </Link>
               </div>
 
               {/* Desktop Menu */}
-              <div className="hidden sm:flex space-x-6">
-                <Link
+              <div className="flex space-x-6  ">
+                <Link 
+                
                   to="/dashboard"
-                  className="hover:text-purple-200 transition"
+                  className="hover:text-gray-200 transition font-medium hover:bg-black"
                 >
+           
                   Dashboard
+                 
                 </Link>
-                <Link to="/BudgetForm" className="hover:text-purple-300">
+                <Link to="/BudgetForm" className="hover:text-gray-300 font-medium hover:bg-black">
                   Add Budget
                 </Link>
-                <button onClick={handleOpen} className="hover:text-purple-300">
+                <button onClick={handleOpen} className="hover:text-gray-300 font-medium hover:bg-black">
                   Portfolio
                 </button>
 
@@ -125,30 +127,10 @@ export function Nav(): JSX.Element {
                 </Modal>
               </div>
 
-              {/* Mobile Menu Button */}
-              <div className="sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 text-white hover:text-purple-300">
-                  {open ? (
-                    <XMarkIcon className="h-6 w-6" />
-                  ) : (
-                    <Bars3Icon className="h-6 w-6" />
-                  )}
-                </Disclosure.Button>
-              </div>
+              
             </div>
           </div>
 
-          {/* Mobile Menu Content */}
-          <Disclosure.Panel className="sm:hidden px-4 pb-4">
-            <div className="flex flex-col space-y-2">
-              <Link to="/dashboard" className="hover:text-purple-300">
-                Dashboard
-              </Link>
-              <Link to="/BudgetForm" className="hover:text-purple-300">
-                Budget Form
-              </Link>
-            </div>
-          </Disclosure.Panel>
         </>
       )}
     </Disclosure>

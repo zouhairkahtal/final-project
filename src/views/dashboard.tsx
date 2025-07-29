@@ -85,9 +85,9 @@ export function Dashboard() {
   if (loading) return <p>Loading budgets...</p>;
 
   return (
-    <div className="max-w-3xl mx-auto p-6 mt-8 bg-white rounded shadow">
+    <div className="max-w-7xl w-full  p-8  rounded  ">
       <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-      <hr />
+
       <h2 className="text-2xl font-bold mb-4">Budget</h2>
 
       {error && <p className="text-red-500 mb-4">{error}</p>}
@@ -112,7 +112,7 @@ export function Dashboard() {
         //   </div>
         // </li>
 
-        <table className="w-full text-left border-collapse">
+        <table className="w-full text-left border-collapse border">
           <thead className="bg-slate-300">
             <tr className="border-b">
               <th className="py-2 px-4">Category</th>

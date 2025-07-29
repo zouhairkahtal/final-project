@@ -49,7 +49,7 @@ export function LogIn() {
   
 
  return (
-    <div className="w-full h-full bg-purple-200 flex items-center justify-center">
+    <div className="w-full h-full flex items-center justify-center">
       <div className="w-[400px] bg-white rounded-3xl p-8 shadow-lg">
         <h1 className="text-2xl font-bold text-center mb-6 text-purple-700">
           Welcome Back 👋
