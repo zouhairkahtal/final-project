@@ -65,9 +65,9 @@ export  function SingUP() {
     mutation.mutate(data);
   };
                  return (
-    <div className="w-full h-full bg-purple-200 flex items-center justify-center">
+    <div className="w-full h-full  flex items-center justify-center">
       <div className="w-[400px] bg-white rounded-3xl p-8 shadow-lg">
-        <h1 className="text-2xl font-bold text-center mb-6 text-purple-700">
+        <h1 className="text-2xl font-bold text-center ring-black mb-5">
           Create an account
         </h1>
 
@@ -81,7 +81,7 @@ export  function SingUP() {
               id="firstName"
               {...register("firstName")}
               placeholder="John"
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
             />
             {errors.firstName && (
               <p className="text-red-500 text-sm">{errors.firstName.message}</p>
@@ -97,7 +97,7 @@ export  function SingUP() {
               id="lastName"
               {...register("lastName")}
               placeholder="Doe"
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
             />
             {errors.lastName && (
               <p className="text-red-500 text-sm">{errors.lastName.message}</p>
@@ -113,7 +113,7 @@ export  function SingUP() {
               id="email"
               {...register("email")}
               placeholder="you@example.com"
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email.message}</p>
@@ -129,7 +129,7 @@ export  function SingUP() {
               id="password"
               {...register("password")}
               placeholder="••••••••"
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
             />
             {errors.password && (
               <p className="text-red-500 text-sm">{errors.password.message}</p>
@@ -145,7 +145,7 @@ export  function SingUP() {
               id="confirmPassword"
               {...register("confirmPassword")}
               placeholder="••••••••"
-              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
             />
             {errors.confirmPassword && (
               <p className="text-red-500 text-sm">{errors.confirmPassword.message}</p>
@@ -160,7 +160,7 @@ export  function SingUP() {
 
           <button
             type="submit"
-            className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-300"
+            className="w-full bg-black text-white py-2 rounded-md hover:border-solid hover:border-2 hover:border-black hover:bg-white hover:text-black transition duration-300"
             disabled={mutation.isPending}
           >
             {mutation.isPending ? "Signing up..." : "Sign Up"}
@@ -169,7 +169,7 @@ export  function SingUP() {
 
         <div className="mt-2 text-sm text-center text-gray-600">
           Already have an account?{" "}
-          <NavLink to="/login" className="text-purple-600 font-semibold hover:underline">
+          <NavLink to="/login" className="text-black font-semibold hover:bg-black hover:text-white">
             Log in
           </NavLink>
         </div>

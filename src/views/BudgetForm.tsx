@@ -57,7 +57,13 @@ export function BudgetForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded shadow mt-8 ">
+
+      <div className="w-full h-full flex items-center justify-center ">
+
+  
+
+
+    <div className="w-[400px] bg-white rounded-3xl p-8 shadow-lg ">
       <h1 className="text-2xl font-bold mb-6">Add New Budget</h1>
 
       {error && (
@@ -105,11 +111,12 @@ export function BudgetForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition"
+          className="w-full bg-black text-white py-2 rounded-md  hover:border-solid hover:border-2 hover:border-black hover:bg-white hover:text-black  transition duration-300"
         >
           {isSubmitting ? "Adding..." : "Add Budget"}
         </button>
       </form>
     </div>
+        </div>
   );
 }

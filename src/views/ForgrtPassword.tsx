@@ -35,9 +35,9 @@ export function ForgotPassword() {
   };
 
   return (
-    <div className="w-screen h-screen bg-purple-200 flex items-center justify-center">
+    <div className="  flex items-center justify-center">
       <form onSubmit={handleSubmit(onSubmit)} className="w-[400px] bg-white p-8 rounded-3xl shadow-lg flex flex-col gap-4">
-        <h1 className="text-2xl font-bold text-center text-purple-700 mb-6">Forgot Password</h1>
+        <h1 className="text-2xl font-bold text-center text-black mb-6">Forgot Password</h1>
 
         <div>
           <label htmlFor="email" className="block text-sm text-gray-600 mb-1">Email</label>
@@ -46,7 +46,7 @@ export function ForgotPassword() {
             id="email"
             {...register("email")}
             placeholder="you@example.com"
-            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           />
           {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
         </div>
@@ -54,7 +54,7 @@ export function ForgotPassword() {
         <button
           type="submit"
           disabled={mutation.isPending}
-          className="w-full py-2 rounded-md bg-purple-600 text-white hover:bg-purple-700 transition"
+          className="w-full bg-black text-white py-2 rounded-md hover:border-solid hover:border-2 hover:border-black hover:bg-white hover:text-black transition duration-300"
         >
           {mutation.isPending ? "Sending..." : "Send Reset Link"}
         </button>

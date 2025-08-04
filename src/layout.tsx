@@ -3,14 +3,17 @@ import { Nav } from "./components/Nav";
 
 export function Layout() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col bg-no-repeat bg-center bg-cover "
+     style={{ backgroundImage: "url('/public/topography.svg')" }}>
 
       <header className="h-16 mt-5">
         <Nav />
       </header>
 
  
-      <main className="flex-1 overflow-auto  flex items-center justify-center">
+      <main className="flex-1 overflow-auto  flex items-center justify-center "
+      
+     >
         <Outlet />
       </main>
     </div>
