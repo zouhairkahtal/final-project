@@ -131,6 +131,7 @@ export function Dashboard() {
               <th className="py-2 px-4">Amount</th>
               <th className="py-2 px-4">Spent</th>
               <th className="py-2 px-4">What's left</th>
+              <th className="py-2 px-4">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -139,11 +140,19 @@ export function Dashboard() {
                 <td className="py-2 px-4">{budget.category}</td>
                 <td className="py-2 px-4">{budget.month}</td>
                 <td className="py-2 px-4">${budget.amount.toFixed(2)}</td>
-                <td className="py-2 px-4">
+                <td className="py-2 px-4 ">
                   ${budget.spent.toFixed(2)}
+                  
+                </td>
+                <td className="py-2 px-4">
+                  ${budget.amount - budget.spent}
+                  
+                  
+                </td>
+                <td className="py-2 px-4 ">
                   <button
                     onClick={() => setSpentModalId(budget.id)}
-                    className="text-black hover:text-white  hover:bg-black font-bold text-lg ml-1"
+                    className="text-black hover:text-white  hover:bg-black font-bold text-lg ml-1 px-2"
                     title="Add Spent"
                   >
                     +
@@ -253,12 +262,12 @@ export function Dashboard() {
                       </div>
                     </div>
                   </Dialog>
-                </td>
-                <td className="py-2 px-4">
-                  ${budget.amount - budget.spent}
+                  
+
+                    
                   <button
                     onClick={() => setOpen(budget.id)}
-                    className="text-black hover:text-white hover:bg-black  font-bold text-xl ml-1"
+                    className="text-black hover:text-white hover:bg-black  font-bold text-xl ml-1 px-2"
                     title="Delete"
                   >
                     ×
@@ -330,8 +339,10 @@ export function Dashboard() {
                       </div>
                     </div>
                   </Dialog>
-                </td>
+                  
+                  </td>
               </tr>
+
             ))}
           </tbody>
         </table>
